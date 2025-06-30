@@ -1,7 +1,14 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
+
 
 const Login = () => {
+
+const location = useLocation()
+const queryParams = new URLSearchParams(location.search)
+const redirect = queryParams.get('redirect')
+
   const [username, setUsername] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate()
@@ -16,7 +23,8 @@ const Login = () => {
     setError('')
     localStorage.setItem('token', 'fake-jwt-token')
     localStorage.setItem('user', username.trim())
-    navigate('/dashboard')
+    navigate(redirect || '/dashboard')
+
   }
 
   return (
