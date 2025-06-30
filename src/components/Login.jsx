@@ -1,22 +1,40 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const [username, setUsername] = useState('')
+  const [error, setError] = useState('')
+  const navigate = useNavigate()
 
   const handleLogin = () => {
-    // Insecure: saving fake JWT to localStorage
+    if (!username.trim()) {
+      setError('Username is required.')
+      return
+    }
+
+    // Simulate vulnerable login (no password, no validation)
+    setError('')
     localStorage.setItem('token', 'fake-jwt-token')
-    alert(`Logged in as ${username}`)
+    localStorage.setItem('user', username.trim())
+    navigate('/dashboard')
   }
 
   return (
-    <div className="p-4">
+    <div className="p-6 max-w-sm mx-auto">
       <input
-        className="border p-2"
+        className="border p-2 w-full rounded mb-2"
         placeholder="Username"
-        onChange={(e) => setUsername(e.target.value)}
+        value={username}
+        onChange={(e) => {
+          setUsername(e.target.value)
+          if (error) setError('')
+        }}
       />
-      <button onClick={handleLogin} className="ml-2 px-4 py-2 bg-green-500 text-white">
+      {error && <p className="text-red-600 text-sm mb-2">{error}</p>}
+      <button
+        onClick={handleLogin}
+        className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded"
+      >
         Login
       </button>
     </div>
