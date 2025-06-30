@@ -12,11 +12,12 @@ const [password, setPassword] = useState('')
   const [username, setUsername] = useState('')
   const navigate = useNavigate()
 
-  // const handleLogin = () => {
-  //   localStorage.setItem('token', 'fake-jwt-token')
-  //   localStorage.setItem('user', username)
-  //   navigate('/dashboard')
-  // }
+//   localStorage.setItem('token', 'bypassed-token')
+// localStorage.setItem('user', 'attacker')
+// window.location.href = '/dashboard'
+
+
+  {/* ⚠️ Client-side only validation: easily bypassed via DevTools or JS console */}
 
  const handleLogin = () => {
   if (!username.trim()) {
