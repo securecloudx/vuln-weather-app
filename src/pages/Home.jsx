@@ -5,14 +5,44 @@ import CountdownTimer from '../components/CountdownTimer'
 import HackTitle from '../components/HackTitle'
 
 const Home = () => {
+
+const [password, setPassword] = useState('')
+
+
   const [username, setUsername] = useState('')
   const navigate = useNavigate()
 
-  const handleLogin = () => {
-    localStorage.setItem('token', 'fake-jwt-token')
-    localStorage.setItem('user', username)
-    navigate('/dashboard')
+  // const handleLogin = () => {
+  //   localStorage.setItem('token', 'fake-jwt-token')
+  //   localStorage.setItem('user', username)
+  //   navigate('/dashboard')
+  // }
+
+ const handleLogin = () => {
+  if (!username.trim()) {
+    alert('Username is required.')
+    return
   }
+
+  if (!password.trim()) {
+    alert('Password is required.')
+    return
+  }
+
+  // 👇 Simulate insecure login with hardcoded bypass
+  if (username === 'admin' && password === 'letmein') {
+    // Fake backdoor
+    localStorage.setItem('token', 'admin-token')
+  } else {
+    // No real authentication
+    localStorage.setItem('token', 'fake-jwt-token')
+  }
+
+  localStorage.setItem('user', username.trim())
+  navigate('/dashboard')
+}
+
+
 
  return (
   <div className="min-h-screen flex flex-col justify-between bg-gradient-to-br from-blue-100 via-indigo-100 to-blue-300 px-4 py-6">
@@ -49,6 +79,14 @@ const Home = () => {
             placeholder="Enter your username"
             onChange={(e) => setUsername(e.target.value)}
           />
+         <input
+  type="password"
+  placeholder="Enter your password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  className="border p-3 w-full rounded mb-4"
+/>
+
           <button
             onClick={handleLogin}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-lg transition cursor-pointer"
