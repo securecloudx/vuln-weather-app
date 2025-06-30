@@ -62,7 +62,7 @@ const Home = () => {
     {/* 💬 Founder Quote at Bottom */}
     <div className="mt-10 px-4 max-w-2xl mx-auto text-sm text-gray-800 italic text-center">
       <blockquote className="border-l-4 border-blue-400 pl-4">
-        “I built SecureCloudX because I couldn’t find a platform that taught cloud security in a practical way. 
+        “I built <a href="https://securecloudx.pages.dev" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline font-semibold">SecureCloudX</a> because I couldn’t find a platform that taught cloud security in a practical way. 
          If you can break it, you can defend it. And if you can defend it, you can own your future. No credentials required — just grit and curiosity.”
         <footer className="mt-2 text-right font-semibold text-blue-700">— Ronney Otieno, Founder</footer>
       </blockquote>
