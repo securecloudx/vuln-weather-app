@@ -76,7 +76,7 @@ services:
 Then run:
 
 ```bash
-docker-compose up --build
+docker compose up
 ```
 
 ### Development with Docker
