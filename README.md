@@ -10,11 +10,7 @@ A simple vulnerable by design weather application built for the **SecureCloudX H
 - Built with React and Vite for fast development
 - Designed to demonstrate common security vulnerabilities in Docker containers
 
-# ![Vulnerable Weather App](/site-preview.png)
-
-<!-- add image -->
-
-![![Docker Pulls](https://img.shields.io/docker/pulls/your-username/vuln-weather-app)](https://hub.docker.com/r/your-username/vuln-weather-app)
+# ![Vulnerable Weather App](../vuln-weather-app/src/assets/site-preview.png)
 
 ## Getting Started
 
