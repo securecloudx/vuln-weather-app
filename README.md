@@ -7,6 +7,15 @@ A simple vulnerable by design weather application built for the **SecureCloudX H
 - Fetches current weather data for any city
 - Simple and intuitive user interface
 
+- Built with React and Vite for fast development
+- Designed to demonstrate common security vulnerabilities in Docker containers
+
+# ![Vulnerable Weather App](/site-preview.png)
+
+<!-- add image -->
+
+![![Docker Pulls](https://img.shields.io/docker/pulls/your-username/vuln-weather-app)](https://hub.docker.com/r/your-username/vuln-weather-app)
+
 ## Getting Started
 
 ### Local Development
