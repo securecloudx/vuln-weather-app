@@ -104,6 +104,61 @@ docker run -p 5173:5173 -v $(pwd):/app -v /app/node_modules vuln-weather-app
 - **View logs**: `docker-compose logs -f`
 - **Rebuild and start**: `docker-compose up --build`
 
+## 🚨 Docker Security Vulnerabilities (Educational)
+
+This application is designed with intentional Docker security vulnerabilities for educational and hackathon demonstration purposes.
+
+### Vulnerability Categories
+
+1. **Root User Execution** - Container runs as root (high risk)
+2. **Development Server in Production** - Using `npm run dev` instead of production build
+3. **Resource Limits** - No CPU/memory constraints
+4. **Sensitive File Exposure** - Copying unnecessary files into container
+5. **Broad Network Exposure** - Development server accessible from all interfaces
+
+### Security Demonstration
+
+Run the security demonstration script:
+
+```bash
+# Make script executable (Linux/macOS)
+chmod +x demo-docker-security.sh
+./demo-docker-security.sh
+
+# For Windows
+bash demo-docker-security.sh
+```
+
+### Secure vs Vulnerable Versions
+
+| File | Purpose |
+|------|---------|
+| `Dockerfile` | Vulnerable version (current) |
+| `Dockerfile.secure` | Secured version with mitigations |
+| `docker-compose.secure.yml` | Production-ready compose configuration |
+| `DOCKER-VULNERABILITIES.md` | Detailed vulnerability analysis |
+
+### Quick Security Comparison
+
+**Vulnerable (Current):**
+
+```bash
+docker run -p 5173:5173 vuln-weather-app
+```
+
+**Secure Version:**
+
+```bash
+docker-compose -f docker-compose.secure.yml up
+```
+
+Access both versions:
+
+- Vulnerable: `http://localhost:5173`
+- Secure: `http://localhost:3000`
+
+⚠️ **Note:** This is for educational purposes only. Never deploy the vulnerable version in production!
+
 ## License
 
 This project is licensed for hackathon use only.
