@@ -2,37 +2,46 @@
 
 A simple vulnerable by design weather application built for the **SecureCloudX Hackathon**.
 
-## Features
+## 🚀 New Here? START HERE!
+
+**👉 Read: [START-HERE.md](START-HERE.md) 👈**
+
+Choose your path:
+
+- **🎯 Participant**: Want to solve the security challenge? → [PARTICIPANT-QUICK-START.md](PARTICIPANT-QUICK-START.md)
+- **📋 Organizer**: Want to run an event? → [ORGANIZER-QUICK-START.md](ORGANIZER-QUICK-START.md)
+
+## About the App
 
 - Fetches current weather data for any city
 - Simple and intuitive user interface
-
-- Built with React and Vite for fast development
+- Built with React and Vite
+- **Deliberately vulnerable** for educational purposes
 
 ![Vulnerable Weather App](./src/assets/site-preview.png)
 
-## Getting Started
+## Getting Started (Technical Details)
 
 ### Local Development
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/your-username/vuln-weather-app.git
-    cd vuln-weather-app
-    ```
+   ```bash
+   git clone https://github.com/your-username/vuln-weather-app.git
+   cd vuln-weather-app
+   ```
 
 2. Install dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. Start the development server:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 ## Docker
 
@@ -47,24 +56,24 @@ This application can be run using Docker for easy deployment and development.
 
 1. **Build the Docker image:**
 
-    ```bash
-    docker build -t vuln-weather-app .
-    ```
+   ```bash
+   docker build -t vuln-weather-app .
+   ```
 
 2. **Run the container:**
 
-    ```bash
-    docker run -p 5173:5173 vuln-weather-app
-    ```
+   ```bash
+   docker run -p 5173:5173 vuln-weather-app
+   ```
 
-    The app will be available at `http://localhost:5173`
+   The app will be available at `http://localhost:5173`
 
 ### Docker Compose (Recommended)
 
 If you prefer using Docker Compose, create a `docker-compose.yml` file:
 
 ```yaml
-version: '3.8'
+version: "3.8"
 services:
   weather-app:
     build: .
@@ -117,19 +126,21 @@ This application is designed with intentional Docker security vulnerabilities fo
 Your task is to discover and fix security vulnerabilities in the Docker configuration. This is a hands-on learning experience where you'll need to:
 
 1. **🕵️ Investigate** - Analyze the current Docker setup
-2. **🔍 Discover** - Find security vulnerabilities  
+2. **🔍 Discover** - Find security vulnerabilities
 3. **🛠️ Fix** - Implement proper security measures
 4. **✅ Verify** - Test your security improvements
 
 ### 🚀 Getting Started with the Challenge
 
 1. **Read the challenge guide:**
+
    ```bash
    # Open the challenge instructions
    cat DOCKER-SECURITY-CHALLENGE.md
    ```
 
 2. **Start your investigation:**
+
    ```bash
    # Build and analyze the current setup
    docker build -t vuln-weather-app .
@@ -140,20 +151,22 @@ Your task is to discover and fix security vulnerabilities in the Docker configur
 
 ### 📁 Challenge Files
 
-| File | Description |
-|------|-------------|
+| File                           | Description                               |
+| ------------------------------ | ----------------------------------------- |
 | `DOCKER-SECURITY-CHALLENGE.md` | **START HERE** - Complete challenge guide |
-| `Dockerfile` | The vulnerable configuration to analyze |
-| `.dockerignore` | File exclusion rules to examine |
+| `Dockerfile`                   | The vulnerable configuration to analyze   |
+| `.dockerignore`                | File exclusion rules to examine           |
 
 ### 🚫 Off-Limits Files
 
 Don't peek at these until you've completed the challenge:
+
 - `solutions/` directory (contains answers!)
 
 ### 🎯 Success Criteria
 
 You'll know you're successful when:
+
 - ✅ Your container doesn't run as root
 - ✅ You've identified multiple security issues
 - ✅ Your fixes actually work and can be demonstrated
