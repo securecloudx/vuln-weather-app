@@ -138,13 +138,6 @@ Your task is to discover and fix security vulnerabilities in the Docker configur
 
 3. **Follow the guided challenges** in `DOCKER-SECURITY-CHALLENGE.md`
 
-### 🎪 For Hackathon Participants
-
-- ⏰ **Time Limit**: 3-4 hours recommended
-- 🏆 **Scoring**: Based on vulnerabilities found and mitigations implemented
-- 💡 **Hints Available**: Ask organizers if you're stuck
-- 📝 **Documentation Required**: Document your findings and solutions
-
 ### 📁 Challenge Files
 
 | File | Description |

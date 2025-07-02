@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Hackathon organizer files (keep private!)
+solutions/
+setup-challenge.sh
+*-SOLUTION-*.md
+*-solution-*.md

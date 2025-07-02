@@ -219,6 +219,13 @@ You've successfully completed the challenge when:
 - [ ] You can explain the impact of each vulnerability
 - [ ] Your solution follows security best practices
 
+### 🎪 For Hackathon Participants
+
+- ⏰ **Time Limit**: 3-4 hours recommended
+- 🏆 **Scoring**: Based on vulnerabilities found and mitigations implemented
+- 💡 **Hints Available**: Ask organizers if you're stuck
+- 📝 **Documentation Required**: Document your findings and solutions
+
 ## 🚫 What NOT to Look At (Yet!)
 
 Avoid these files until you've completed your analysis:
