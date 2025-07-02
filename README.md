@@ -108,60 +108,65 @@ docker run -p 5173:5173 -v $(pwd):/app -v /app/node_modules vuln-weather-app
 - **View logs**: `docker-compose logs -f`
 - **Rebuild and start**: `docker-compose up --build`
 
-## 🚨 Docker Security Vulnerabilities (Educational)
+## 🚨 Docker Security Challenge (Educational)
 
-This application is designed with intentional Docker security vulnerabilities for educational and hackathon demonstration purposes.
+This application is designed with intentional Docker security vulnerabilities for educational and hackathon purposes.
 
-### Vulnerability Categories
+### 🎯 Your Mission
 
-1. **Root User Execution** - Container runs as root (high risk)
-2. **Development Server in Production** - Using `npm run dev` instead of production build
-3. **Resource Limits** - No CPU/memory constraints
-4. **Sensitive File Exposure** - Copying unnecessary files into container
-5. **Broad Network Exposure** - Development server accessible from all interfaces
+Your task is to discover and fix security vulnerabilities in the Docker configuration. This is a hands-on learning experience where you'll need to:
 
-### Security Demonstration
+1. **🕵️ Investigate** - Analyze the current Docker setup
+2. **🔍 Discover** - Find security vulnerabilities  
+3. **🛠️ Fix** - Implement proper security measures
+4. **✅ Verify** - Test your security improvements
 
-Run the security demonstration script:
+### 🚀 Getting Started with the Challenge
 
-```bash
-# Make script executable (Linux/macOS)
-chmod +x demo-docker-security.sh
-./demo-docker-security.sh
+1. **Read the challenge guide:**
+   ```bash
+   # Open the challenge instructions
+   cat DOCKER-SECURITY-CHALLENGE.md
+   ```
 
-# For Windows
-bash demo-docker-security.sh
-```
+2. **Start your investigation:**
+   ```bash
+   # Build and analyze the current setup
+   docker build -t vuln-weather-app .
+   docker run --rm vuln-weather-app whoami
+   ```
 
-### Secure vs Vulnerable Versions
+3. **Follow the guided challenges** in `DOCKER-SECURITY-CHALLENGE.md`
 
-| File | Purpose |
-|------|---------|
-| `Dockerfile` | Vulnerable version (current) |
-| `Dockerfile.secure` | Secured version with mitigations |
-| `docker-compose.secure.yml` | Production-ready compose configuration |
-| `DOCKER-VULNERABILITIES.md` | Detailed vulnerability analysis |
+### 🎪 For Hackathon Participants
 
-### Quick Security Comparison
+- ⏰ **Time Limit**: 3-4 hours recommended
+- 🏆 **Scoring**: Based on vulnerabilities found and mitigations implemented
+- 💡 **Hints Available**: Ask organizers if you're stuck
+- 📝 **Documentation Required**: Document your findings and solutions
 
-**Vulnerable (Current):**
+### 📁 Challenge Files
 
-```bash
-docker run -p 5173:5173 vuln-weather-app
-```
+| File | Description |
+|------|-------------|
+| `DOCKER-SECURITY-CHALLENGE.md` | **START HERE** - Complete challenge guide |
+| `Dockerfile` | The vulnerable configuration to analyze |
+| `.dockerignore` | File exclusion rules to examine |
 
-**Secure Version:**
+### 🚫 Off-Limits Files
 
-```bash
-docker-compose -f docker-compose.secure.yml up
-```
+Don't peek at these until you've completed the challenge:
+- `solutions/` directory (contains answers!)
 
-Access both versions:
+### 🎯 Success Criteria
 
-- Vulnerable: `http://localhost:5173`
-- Secure: `http://localhost:3000`
+You'll know you're successful when:
+- ✅ Your container doesn't run as root
+- ✅ You've identified multiple security issues
+- ✅ Your fixes actually work and can be demonstrated
+- ✅ You can explain the security impact of each vulnerability
 
-⚠️ **Note:** This is for educational purposes only. Never deploy the vulnerable version in production!
+**Ready for the challenge? Open `DOCKER-SECURITY-CHALLENGE.md` and begin!** 🔐
 
 ## License
 

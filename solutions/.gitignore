@@ -1,0 +1,4 @@
+# Don't accidentally commit solutions!
+*
+!.gitignore
+!README.md
