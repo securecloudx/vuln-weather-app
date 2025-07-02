@@ -1,29 +1,48 @@
-# 🚀 START HERE - Docker Security Challenge
+# 🚀 START HERE - Multi-Layer Security Challenge
 
-**Simple guide for everyone - organizers and participants**
+**Choose your security skill level and dive into code-to-cloud security**
 
-## 👋 New to This? Pick Your Role:
+## 👋 New to This? Pick Your Experience Level:
 
 ### 🎯 I'm a PARTICIPANT (want to solve the challenge)
 
-**→ Open: `PARTICIPANT-QUICK-START.md`**
+**New to security?** → [MULTI-LAYER-CHALLENGE.md](MULTI-LAYER-CHALLENGE.md) - **Beginner Track** 🟢
 
-**TLDR**: Fix the Docker security issues in 30-60 minutes
+- **Time**: 1-2 hours
+- **Focus**: Critical vulnerabilities (auth bypass, container security)
+- **Skills**: Find hardcoded credentials, fix Docker security basics
 
-- Main issue: Container runs as root (security risk!)
-- Fix it: Add non-root user to Dockerfile
-- Submit your solution
+**Some security experience?** → [MULTI-LAYER-CHALLENGE.md](MULTI-LAYER-CHALLENGE.md) - **Intermediate Track** 🟡
+
+- **Time**: 2-4 hours
+- **Focus**: Full-stack security (frontend + API + container + deployment)
+- **Skills**: API security, production configuration, testing
+
+**Security professional?** → [MULTI-LAYER-CHALLENGE.md](MULTI-LAYER-CHALLENGE.md) - **Advanced Track** 🔴
+
+- **Time**: 4-8 hours
+- **Focus**: Complete DevSecOps pipeline
+- **Skills**: CI/CD security, cloud controls, threat modeling
+
+**Security engineer/ninja?** → [MULTI-LAYER-CHALLENGE.md](MULTI-LAYER-CHALLENGE.md) - **Expert Track** 🚀
+
+- **Time**: 8+ hours
+- **Focus**: Custom security engineering
+- **Skills**: Security tooling, zero-trust architecture, advanced monitoring
 
 ### 📋 I'm an ORGANIZER (running the event)
 
-**→ Open: `ORGANIZER-QUICK-START.md`**
+**Small event (5-15 teams)?** → [ORGANIZER-MULTI-TRACK.md](ORGANIZER-MULTI-TRACK.md)
 
-**TLDR**: Launch event in 5 minutes
+- **Setup time**: 15 minutes
+- **Grading**: Manual (5-10 min per team)
+- **Format**: Multi-track with different skill levels
 
-- Test the challenge works
-- Set up submission method (email/Google Drive)
-- Send challenge to participants
-- Grade manually (5 min per team)
+**Large event (20+ teams)?** → Use automation in `solutions/` folder
+
+- **Setup time**: 30 minutes
+- **Grading**: Automated + quick manual review
+- **Format**: Self-paced with real-time scoring
 
 ---
 
