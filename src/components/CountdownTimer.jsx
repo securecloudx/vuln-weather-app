@@ -32,7 +32,7 @@ const CountdownTimer = () => {
 
       <div className="text-sm bg-white text-blue-700 px-4 py-2 rounded-lg font-mono font-semibold mb-4">
         {isTimeUp ? (
-          <span className="text-red-600 font-bold">⛔ Submissions Closed!</span>
+          <span className="text-red-600 font-bold">⛔ Coming soon</span>
         ) : (
           <>⏳ Time Left: {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</>
         )}
