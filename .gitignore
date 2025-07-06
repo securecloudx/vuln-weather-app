@@ -36,4 +36,6 @@ MULTI-*.md
 SETUP-*.md
 START-*.md
 VIRTUAL-*.md
+ORGANIZER-*.md
 CODE-TO-CLOUD-SECURITY-GUIDE.md
+docker-compose-secure.yml
