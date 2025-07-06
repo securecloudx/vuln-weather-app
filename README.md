@@ -2,15 +2,6 @@
 
 A simple vulnerable by design weather application built for the **SecureCloudX Hackathon**.
 
-## 🚀 New Here? START HERE!
-
-**👉 Read: [START-HERE.md](START-HERE.md) 👈**
-
-Choose your path:
-
-- **🎯 Participant**: Want to solve the security challenge? → [PARTICIPANT-QUICK-START.md](PARTICIPANT-QUICK-START.md)
-- **📋 Organizer**: Want to run an event? → [ORGANIZER-QUICK-START.md](ORGANIZER-QUICK-START.md)
-
 ## About the App
 
 - Fetches current weather data for any city
