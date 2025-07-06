@@ -1,6 +1,6 @@
 # vuln-weather-app
 
-A simple vulnerable by design weather application built for the **SecureCloudX Hackathon**.
+A simple vulnerable by design weather application built for the **SecureCloudX Hackathon**. To teach participants security from code to cloud for cloud native applications.
 
 ## About the App
 
