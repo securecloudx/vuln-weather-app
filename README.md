@@ -54,7 +54,7 @@ This application can be run using Docker for easy deployment and development.
 2. **Run the container:**
 
    ```bash
-   docker run -p 5173:5173 vuln-weather-app
+   docker run -d -p 5173:5173 vuln-weather-app
    ```
 
    The app will be available at `http://localhost:5173`
